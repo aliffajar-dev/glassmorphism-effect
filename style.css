@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;    
 }
-section
+section /*bagian tampilan seluruh web*/
 {
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ section
     padding: 100px 20px;
     box-sizing: border-box;
 }
-section::before
+section::before /*bagian tampilan lingkaran atas*/
 {
     content: '';
     position: fixed;
@@ -28,7 +28,7 @@ section::before
     background: #FFBB1A;
     clip-path: circle(65% at 100% -20%);
 }
-section::after
+section::after /*bagian tampilan lingkaran bawah*/
 {
     content: '';
     position: fixed;
@@ -39,7 +39,7 @@ section::after
     background: #1EA8E0;
     clip-path: circle(35% at 0% 100%);
 }
-.container
+.container /*pembungkus blok tampilan produk*/
 {
     position: relative;
     z-index: 10;
@@ -48,7 +48,7 @@ section::after
     align-items: center;
     flex-wrap: wrap;
 }
-.container .card
+.container .card /*latar belakang gambar produk*/
 {
     position: relative;
     width: 220px;
@@ -62,7 +62,7 @@ section::after
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(15px);
 }
-.container .card .imgBx
+.container .card .imgBx /*image box*/
 {
     position: relative;
     display: flex;
@@ -72,15 +72,15 @@ section::after
     padding: 20px;
     transition: 0.5s ease-in-out;
 }
-.container .card:hover .imgBx
+.container .card:hover /*ketika kursor berada dalam objek maka akan melakukan perintah yang sudah kita perintah*/ .imgBx
 {
-    transform: translateY(-100px);
+    transform: translateY(-100px); /*memiringkan gambar ke kiri sampai sumbu Y vertikal -100*/
 }
-.container .card .imgBx img
+.container .card .imgBx img /*mengatur bagian gambar*/
 {
     max-width: 150%;
     margin: 0 0 20px;
-    transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out; /*efek transisi miring keatas lalu dapat kembali kebawah*/
 }
 .container .card:hover .imgBx img
 {
